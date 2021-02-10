@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>instructure-ui - A design system by Instructure Inc. (7.3.5)</title>
+
+    <!-- font for canvas theme -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,700i" rel="stylesheet">
+
+    <!-- homepage hero image -->
+    <link rel="preload" href="https://instui-docs.s3.us-east-2.amazonaws.com/hero2.jpg" as="image">
+
+    <!-- custom headline font -->
+    <link rel="preload" href="https://instui-docs.s3.us-east-2.amazonaws.com/tiempos-headline-web-bold.woff2" as="font" type="font/woff2" crossorigin>
+
+    <style type="text/css">
+      @font-face {
+        font-family: "TiemposHeadlineWebBold";
+        src: url("https://instui-docs.s3.us-east-2.amazonaws.com/tiempos-headline-web-bold.woff2") format("woff2");
+      }
+      body {
+        font-family: "Proxima Nova", -apple-system, BlinkMacSystemFont, "Segoe UI",
+        "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+      }
+      #app {
+        height: 100%;
+      }
+      @keyframes docsLoading {
+        to {
+          transform: scale(1) rotate(0);
+        }
+      }
+      .docsLoading {
+        text-align: center;
+        margin: 2rem auto;
+        width: 6rem;
+        height: 6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .docsLoading__Spinner {
+        display: inline-block;
+        position: relative;
+        width: 2rem;
+        height: 2rem;
+      }
+      .docsLoading__Spinner::before, .docsLoading__Spinner::after {
+        content: "";
+        display: block;
+        position: absolute;
+        box-sizing: border-box;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #EA2127;
+        transform: scale(0) rotate(1turn);
+        animation-name: docsLoading;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+      .docsLoading__Spinner::after {
+        animation-direction: alternate-reverse;
+        background: #F68E1F;
+      }
+      .docsLoading__Text {
+        padding-top: 1rem;
+        text-transform: uppercase;
+        font-size: small;
+        color: #666;
+      }
+    </style>
+
+    <meta name="description" content="instructure-ui - A design system by Instructure Inc. (7.3.5)">
+
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-154136827-1', 'auto');
+    </script>
+    <!-- End Google Analytics -->
+
+  </head>
+
+  <body>
+    <div id="flash-messages" role="alert"></div>
+    <div id="app">
+      <div class="docsLoading">
+        <span class="docsLoading__Spinner" aria-hidden="true"></span>
+        <span class="docsLoading__Text">Loading&hellip;</span>
+      </div>
+    </div>
+    <div id="nav"></div>
+  <script type="text/javascript" src="runtime~common.js"></script><script type="text/javascript" src="vendors~common~globals~ui-docs.js" defer></script><script type="text/javascript" src="vendors~globals~ui-docs.js" defer></script><script type="text/javascript" src="ui-docs.js" defer></script><script type="text/javascript" src="common.js"></script><script type="text/javascript" src="globals.js"></script></body>
+</html>
