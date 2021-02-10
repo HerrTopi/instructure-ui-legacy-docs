@@ -1,1 +1,1 @@
-# instructure-ui-legacy-docs
+# GH_PAGES
